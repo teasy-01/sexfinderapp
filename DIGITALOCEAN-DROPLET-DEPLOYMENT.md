@@ -131,7 +131,7 @@ server {
     listen 80;
     listen [::]:80;
     
-    server_name yourdomain.com www.yourdomain.com;
+    server_name sexfinderapp.com www.sexfinderapp.com;
     
     # Redirect HTTP to HTTPS
     return 301 https://$server_name$request_uri;
@@ -142,19 +142,19 @@ server {
     listen 443 ssl http2;
     listen [::]:443 ssl http2;
     
-    server_name yourdomain.com www.yourdomain.com;
+    server_name sexfinderapp.com www.sexfinderapp.com;
     
     # Redirect www to non-www
-    if ($server_name = www.yourdomain.com) {
-        return 301 https://yourdomain.com$request_uri;
+    if ($server_name = www.sexfinderapp.com) {
+        return 301 https://sexfinderapp.com$request_uri;
     }
     
     root /var/www/sexfinderapp;
     index index.html;
     
     # SSL Configuration (add your certificate paths)
-    # ssl_certificate /etc/letsencrypt/live/yourdomain.com/fullchain.pem;
-    # ssl_certificate_key /etc/letsencrypt/live/yourdomain.com/privkey.pem;
+    # ssl_certificate /etc/letsencrypt/live/sexfinderapp.com/fullchain.pem;
+    # ssl_certificate_key /etc/letsencrypt/live/sexfinderapp.com/privkey.pem;
     
     # Enable gzip compression
     gzip on;
@@ -203,7 +203,7 @@ server {
 }
 ```
 
-**Important**: Replace `yourdomain.com` with your actual domain!
+**Important**: Replace `sexfinderapp.com` with your actual domain if different!
 
 ---
 
@@ -240,7 +240,7 @@ apt install certbot python3-certbot-nginx -y
 Get SSL certificate:
 
 ```bash
-certbot certonly --nginx -d yourdomain.com -d www.yourdomain.com
+certbot certonly --nginx -d sexfinderapp.com -d www.sexfinderapp.com
 ```
 
 Follow the prompts (enter email address, accept terms, etc.)
@@ -258,13 +258,13 @@ server {
     listen 443 ssl http2;
     listen [::]:443 ssl http2;
     
-    ssl_certificate /etc/letsencrypt/live/yourdomain.com/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/yourdomain.com/privkey.pem;
+    ssl_certificate /etc/letsencrypt/live/sexfinderapp.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/sexfinderapp.com/privkey.pem;
     ssl_protocols TLSv1.2 TLSv1.3;
     ssl_ciphers HIGH:!aNULL:!MD5;
     ssl_prefer_server_ciphers on;
     
-    server_name yourdomain.com www.yourdomain.com;
+    server_name sexfinderapp.com www.sexfinderapp.com;
     
     # ... rest of config stays same ...
 }
@@ -273,7 +273,7 @@ server {
 server {
     listen 80;
     listen [::]:80;
-    server_name yourdomain.com www.yourdomain.com;
+    server_name sexfinderapp.com www.sexfinderapp.com;
     return 301 https://$server_name$request_uri;
 }
 ```
@@ -293,8 +293,8 @@ Point your domain to your Droplet:
 
 1. **Get your Droplet IP**: Shown in DigitalOcean console
 2. **Update DNS at your registrar**:
-   - Create A record: `yourdomain.com` → `YOUR_DROPLET_IP`
-   - Create A record: `www.yourdomain.com` → `YOUR_DROPLET_IP`
+   - Create A record: `sexfinderapp.com` → `YOUR_DROPLET_IP`
+   - Create A record: `www.sexfinderapp.com` → `YOUR_DROPLET_IP`
 3. **Wait** for DNS propagation (up to 24 hours, usually faster)
 
 ---
@@ -321,7 +321,7 @@ certbot renew
 
 ### Test Your Site
 
-1. **Visit** `https://yourdomain.com`
+1. **Visit** `https://sexfinderapp.com`
 2. **Check HTTPS** - Green lock should appear
 3. **Test pages** - Click around, verify all links work
 4. **Check console** - Press F12, no errors?
@@ -411,7 +411,7 @@ certbot certificates
 certbot renew --force-renewal
 
 # Check certificate expiration
-echo | openssl s_client -servername yourdomain.com -connect yourdomain.com:443 2>/dev/null | openssl x509 -noout -dates
+echo | openssl s_client -servername sexfinderapp.com -connect sexfinderapp.com:443 2>/dev/null | openssl x509 -noout -dates
 ```
 
 ### Permission Denied
@@ -428,8 +428,8 @@ find /var/www/sexfinderapp -type f -exec chmod 644 {} \;
 
 ```bash
 # Test DNS resolution
-nslookup yourdomain.com
-dig yourdomain.com
+nslookup sexfinderapp.com
+dig sexfinderapp.com
 
 # Check your registrar DNS settings
 # Verify A records point to correct IP
