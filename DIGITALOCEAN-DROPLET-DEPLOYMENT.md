@@ -133,8 +133,28 @@ server {
     
     server_name yourdomain.com www.yourdomain.com;
     
+    # Redirect HTTP to HTTPS
+    return 301 https://$server_name$request_uri;
+}
+
+# HTTPS Server Block
+server {
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+    
+    server_name yourdomain.com www.yourdomain.com;
+    
+    # Redirect www to non-www
+    if ($server_name = www.yourdomain.com) {
+        return 301 https://yourdomain.com$request_uri;
+    }
+    
     root /var/www/sexfinderapp;
     index index.html;
+    
+    # SSL Configuration (add your certificate paths)
+    # ssl_certificate /etc/letsencrypt/live/yourdomain.com/fullchain.pem;
+    # ssl_certificate_key /etc/letsencrypt/live/yourdomain.com/privkey.pem;
     
     # Enable gzip compression
     gzip on;
