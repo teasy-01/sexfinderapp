@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safety & Security | SexFinder Dating App</title>
+    <meta name="description" content="Learn about SexFinder's safety features, guidelines, and resources. We're committed to creating a secure and respectful dating environment for all users.">
+    <meta name="keywords" content="dating safety, online dating security, safe dating tips, user protection, dating guidelines">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="images/favicon.png" href="images/favicon.png">
+</head>
+<body class="bg-white text-gray-900">
+    <!-- Header -->
+    <header class="w-full border-b bg-background/95 backdrop-blur">
+        <div class="container flex h-16 items-center justify-between">
+            <a href="index.html" class="flex items-center">
+  <img src="images/sex-finder-logo.png" alt="SexFinder" class="h-10">
+</a>
+
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="index.html" class="text-gray-600 hover:text-gray-900 transition-colors">Home</a>
+                <a href="about.html" class="text-gray-600 hover:text-gray-900 transition-colors">About</a>
+                <a href="safety.html" class="text-gray-600 hover:text-gray-900 transition-colors">Safety</a>
+                <a href="blog.html" class="text-gray-600 hover:text-gray-900 transition-colors">Blog</a>
+                <a href="contact.html" class="text-gray-600 hover:text-gray-900 transition-colors">Contact</a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <button onclick="openSignInDialog()" class="hidden sm:inline-flex px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">
+                    Sign In
+                </button>
+                <a href="start-verification.html" class="px-6 py-2 rounded-lg bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-white transition-all inline-block">
+  Get Started
+</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-16 space-y-16">
+        <!-- Hero Section -->
+        <section class="text-center space-y-6 max-w-3xl mx-auto">
+            <div class="mx-auto w-fit p-4 rounded-full bg-gradient-to-r from-pink-500 to-red-500 mb-6">
+                <svg class="h-12 w-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                </svg>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold bg-gradient-to-r from-pink-500 to-red-500 bg-clip-text text-transparent">
+                Your Safety is Our Priority
+            </h1>
+            <p class="text-gray-600 text-lg">
+                We're committed to creating a safe, secure, and respectful environment for all our users. 
+                Learn about our safety features, guidelines, and resources to help you have the best experience.
+            </p>
+        </section>
+
+        <!-- Safety Features -->
+        <section class="space-y-8">
+            <div class="text-center space-y-4">
+                <h2 class="text-3xl font-bold">Our Safety Features</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Advanced tools and technology to keep you protected
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white border rounded-xl p-6 space-y-4 text-center hover:shadow-lg transition-shadow">
+                    <div class="mx-auto w-fit p-3 rounded-lg bg-pink-100">
+                        <svg class="h-8 w-8 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold">Profile Verification</h3>
+                    <p class="text-gray-600">
+                        Photo verification and ID checks to ensure authentic profiles and reduce fake accounts.
+                    </p>
+                </div>
+
+                <div class="bg-white border rounded-xl p-6 space-y-4 text-center hover:shadow-lg transition-shadow">
+                    <div class="mx-auto w-fit p-3 rounded-lg bg-pink-100">
+                        <svg class="h-8 w-8 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold">Privacy Controls</h3>
+                    <p class="text-gray-600">
+                        Control who sees your profile, photos, and personal information with granular privacy settings.
+                    </p>
+                </div>
+
+                <div class="bg-white border rounded-xl p-6 space-y-4 text-center hover:shadow-lg transition-shadow">
+                    <div class="mx-auto w-fit p-3 rounded-lg bg-pink-100">
+                        <svg class="h-8 w-8 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold">24/7 Moderation</h3>
+                    <p class="text-gray-600">
+                        Round-the-clock monitoring and AI-powered detection to identify and remove inappropriate content.
+                    </p>
+                </div>
+
+                <div class="bg-white border rounded-xl p-6 space-y-4 text-center hover:shadow-lg transition-shadow">
+                    <div class="mx-auto w-fit p-3 rounded-lg bg-pink-100">
+                        <svg class="h-8 w-8 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold">Easy Reporting</h3>
+                    <p class="text-gray-600">
+                        Quick and simple tools to report suspicious behavior or block users instantly.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Safety Guidelines -->
+        <section class="space-y-8">
+            <div class="text-center space-y-4">
+                <h2 class="text-3xl font-bold">Safety Guidelines</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Tips to help you stay safe while dating online
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+                <div class="bg-white border rounded-xl p-6">
+                    <div class="flex items-start space-x-3">
+                        <svg class="h-6 w-6 text-pink-500 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        <div class="space-y-2">
+                            <h3 class="text-xl font-bold">Protect Your Personal Information</h3>
+                            <p class="text-gray-600">
+                                Never share sensitive information like your home address, financial details, 
+                                or workplace until you've established trust. Keep conversations on the platform initially.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border rounded-xl p-6">
+                    <div class="flex items-start space-x-3">
+                        <svg class="h-6 w-6 text-pink-500 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        <div class="space-y-2">
+                            <h3 class="text-xl font-bold">Meet in Public Places</h3>
+                            <p class="text-gray-600">
+                                Always choose busy, public locations for first meetings. Let a friend or family member 
+                                know your plans and check in with them during your date.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border rounded-xl p-6">
+                    <div class="flex items-start space-x-3">
+                        <svg class="h-6 w-6 text-pink-500 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        <div class="space-y-2">
+                            <h3 class="text-xl font-bold">Trust Your Instincts</h3>
+                            <p class="text-gray-600">
+                                If something feels off, it probably is. Don't hesitate to end a conversation or 
+                                date if you feel uncomfortable. Your safety comes first.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border rounded-xl p-6">
+                    <div class="flex items-start space-x-3">
+                        <svg class="h-6 w-6 text-pink-500 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        <div class="space-y-2">
+                            <h3 class="text-xl font-bold">Watch for Red Flags</h3>
+                            <p class="text-gray-600">
+                                Be cautious of users who avoid video calls, ask for money, pressure you to move 
+                                off-platform quickly, or seem too good to be true.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border rounded-xl p-6">
+                    <div class="flex items-start space-x-3">
+                        <svg class="h-6 w-6 text-pink-500 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        <div class="space-y-2">
+                            <h3 class="text-xl font-bold">Use Built-in Communication Tools</h3>
+                            <p class="text-gray-600">
+                                Keep conversations within the app until you're comfortable. Our platform has safety 
+                                features that help protect you during early interactions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border rounded-xl p-6">
+                    <div class="flex items-start space-x-3">
+                        <svg class="h-6 w-6 text-pink-500 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        <div class="space-y-2">
+                            <h3 class="text-xl font-bold">Report Suspicious Activity</h3>
+                            <p class="text-gray-600">
+                                Help keep our community safe by reporting inappropriate behavior, fake profiles, 
+                                or suspicious activity. We review all reports promptly.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Warning Section -->
+        <section class="bg-amber-50 border border-amber-200 rounded-2xl p-8">
+            <div class="flex items-start space-x-4 max-w-4xl mx-auto">
+                <svg class="h-8 w-8 text-amber-500 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                </svg>
+                <div class="space-y-4">
+                    <h3 class="text-xl font-bold text-amber-900">Be Aware of Scams</h3>
+                    <p class="text-amber-800">
+                        Romance scams are a serious issue in online dating. Never send money to someone you haven't 
+                        met in person, no matter how convincing their story. Be wary of anyone who claims to be in 
+                        a crisis or asks for financial help. If someone pressures you for money or personal information, 
+                        report them immediately.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Support Section -->
+        <section class="space-y-8">
+            <div class="text-center space-y-4">
+                <h2 class="text-3xl font-bold">Need Help?</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Our support team is here to assist you
+                </p>
+            </div>
+
+            <div class="bg-white border rounded-xl max-w-2xl mx-auto">
+                <div class="p-8 space-y-6">
+                    <div class="flex flex-col items-center text-center space-y-4">
+                        <div class="p-4 rounded-full bg-gradient-to-r from-pink-500 to-red-500">
+                            <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9zm-5 15a3 3 0 01-6 0"/>
+                            </svg>
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="text-xl font-bold">24/7 Support Team</h3>
+                            <p class="text-gray-600">
+                                If you experience harassment, feel unsafe, or need assistance, our dedicated 
+                                support team is available around the clock to help you.
+                            </p>
+                        </div>
+                        <a href="contact.html" class="px-6 py-3 rounded-lg bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-white font-medium transition-all">
+                            Contact Support
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section class="bg-gradient-to-r from-pink-500 to-red-500 rounded-2xl p-12">
+            <div class="text-center space-y-6 text-white max-w-3xl mx-auto">
+                <h2 class="text-3xl font-bold text-white">Additional Resources</h2>
+                <p class="text-pink-100">
+                    For more information about online dating safety and support resources, please visit:
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="px-6 py-3 rounded-lg bg-white text-pink-600 hover:bg-pink-50 font-medium transition-colors">
+                        Safety Tips
+                    </button>
+                    <button class="px-6 py-3 rounded-lg bg-white text-pink-600 hover:bg-pink-50 font-medium transition-colors">
+                        Community Guidelines
+                    </button>
+                    <button class="px-6 py-3 rounded-lg bg-white text-pink-600 hover:bg-pink-50 font-medium transition-colors">
+                        Help Center
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t">
+        <div class="container py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="space-y-4">
+                    <a href="index.html" class="flex items-center">
+                        <img src="images/sex-finder-logo.png" alt="SexFinder" class="h-10">
+                    </a>
+                    <p class="text-sm text-gray-600">
+                        SexFinder App is the #1 fuck app for mutually minded people to meet for sex hookups. Members join for free on our sex site, browse members that have mutual goals to meet and fuck. Always free, always safe!
+                    </p>
+                </div>
+                
+                <div class="space-y-4">
+                    <h4 class="font-medium">Company</h4>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="/" class="hover:text-gray-900 transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-gray-900 transition-colors">About</a></li>
+                        <li><a href="blog.html" class="hover:text-gray-900 transition-colors">Blog</a></li>
+                        <li><a href="safety.html" class="hover:text-gray-900 transition-colors">Safety</a></li>
+                    </ul>
+                </div>
+                
+                <div class="space-y-4">
+                    <h4 class="font-medium">Support</h4>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li><a href="contact.html" class="hover:text-gray-900 transition-colors">Contact Us</a></li>
+                        <li><a href="privacy.html" class="hover:text-gray-900 transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-gray-900 transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm text-gray-600">
+                    �� 2025 SexFinder. All rights reserved.
+                </p>
+                <p class="text-sm text-gray-600 mt-4 md:mt-0">
+                    Made with ❤️ for sex connections
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sign In Dialog -->
+    <div id="signInDialog" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50" onclick="closeSignInDialog(event)">
+        <div class="bg-white rounded-lg p-8 max-w-md w-full mx-4" onclick="event.stopPropagation()">
+            <div class="text-center mb-6">
+                <div class="mx-auto w-fit p-3 rounded-full bg-gradient-to-r from-pink-500 to-red-500 mb-4">
+                    <svg class="h-6 w-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+                <h2 class="text-2xl font-bold mb-2">Welcome Back</h2>
+                <p class="text-gray-600">Sign in to your SexFinder account to continue</p>
+            </div>
+
+            <form onsubmit="handleSignIn(event)" class="space-y-4">
+                <div class="space-y-2">
+                    <label for="email" class="block text-sm font-medium">Email</label>
+                    <input type="email" id="email" placeholder="your@email.com" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent outline-none">
+                </div>
+
+                <div class="space-y-2">
+                    <label for="password" class="block text-sm font-medium">Password</label>
+                    <input type="password" id="password" placeholder="••••••••" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent outline-none">
+                </div>
+
+                <div class="flex items-center justify-between text-sm">
+                    <label class="flex items-center space-x-2 cursor-pointer">
+                        <input type="checkbox" class="rounded border-gray-300">
+                        <span class="text-gray-600">Remember me</span>
+                    </label>
+                    <a href="#" class="text-pink-600 hover:text-pink-700">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="w-full py-3 rounded-lg bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-white font-medium transition-all">
+                    Sign In
+                </button>
+
+                <p class="text-center text-sm text-gray-600 mt-4">
+                    Don't have an account? 
+                    <a href="#" class="text-pink-600 hover:text-pink-700 font-medium">Sign up free</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

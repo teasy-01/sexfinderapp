@@ -1,0 +1,76 @@
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# OS Files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Node modules (if using any build tools)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Build files
+dist/
+build/
+*.min.css
+*.min.js
+
+# Logs
+*.log
+logs/
+
+# Cache files
+*.cache
+.cache/
+
+# Temporary files
+*.tmp
+*.temp
+*_old
+*_backup
+
+# IDE settings
+*.sublime-project
+*.sublime-workspace
+.vscode/settings.json
+
+# Compiled files
+*.class
+*.pyc
+*.o
+
+# Database files
+*.sqlite
+*.db
+*.sql
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Dependencies (OS specific)
+.ruby-version
+.python-version
+
+# macOS specific
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows specific
+Thumbs.db
+Desktop.ini
+
+# Linux specific
+.~*
