@@ -167,6 +167,9 @@ server {
     add_header Referrer-Policy "strict-origin-when-cross-origin" always;
     add_header Content-Security-Policy "default-src 'self'; script-src 'self' https://cdn.tailwindcss.com https://code.jquery.com https://cdnjs.cloudflare.com https://maxcdn.bootstrapcdn.com https://cdn.jsdelivr.net https://use.fontawesome.com 'unsafe-inline'; style-src 'self' https://cdn.tailwindcss.com https://stackpath.bootstrapcdn.com https://use.fontawesome.com 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data: https://use.fontawesome.com; connect-src 'self' https://api.ipify.org https://ipapi.co https://central.captainemails.com https://checkip.amazonaws.com https://www.instabang.com;" always;
     
+    # Redirect .html URLs to clean URLs (e.g., /about.html -> /about)
+    rewrite ^(/.+)\.html$ $1 permanent;
+    
     # Cache headers for static assets
     location ~* \.(jpg|jpeg|png|gif|ico|css|js|svg|woff|woff2|ttf|eot)$ {
         expires 365d;
