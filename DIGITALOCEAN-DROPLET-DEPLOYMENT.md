@@ -170,6 +170,10 @@ server {
     # Redirect .html URLs to clean URLs (e.g., /about.html -> /about)
     rewrite ^(/.+)\.html$ $1 permanent;
     
+    # Redirect /index and /index.html to root /
+    rewrite ^/index\.html$ / permanent;
+    rewrite ^/index$ / permanent;
+    
     # Cache headers for static assets
     location ~* \.(jpg|jpeg|png|gif|ico|css|js|svg|woff|woff2|ttf|eot)$ {
         expires 365d;
