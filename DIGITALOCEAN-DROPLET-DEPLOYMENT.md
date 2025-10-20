@@ -132,10 +132,6 @@ server {
     listen 80;
     listen [::]:80;
     server_name sexfinderapp.com www.sexfinderapp.com;
-    # Redirect www to non-www AND to HTTPS
-    if ($host = www.sexfinderapp.com) {
-        return 301 https://sexfinderapp.com$request_uri;
-    }
     return 301 https://sexfinderapp.com$request_uri;
 }
 
@@ -150,7 +146,12 @@ server {
     ssl_ciphers HIGH:!aNULL:!MD5;
     ssl_prefer_server_ciphers on;
     
-    server_name sexfinderapp.com;
+    server_name sexfinderapp.com www.sexfinderapp.com;
+    
+    # Redirect www to non-www (using $host which works reliably)
+    if ($host = www.sexfinderapp.com) {
+        return 301 https://sexfinderapp.com$request_uri;
+    }
     
     # Rewrite rules for clean URLs (must be before location blocks)
     # First, handle index redirects (highest priority)
