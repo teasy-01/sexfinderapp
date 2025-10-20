@@ -155,18 +155,11 @@ server {
         return 301 https://sexfinderapp.com$request_uri;
     }
     
-    # Redirect /index.html and /index to /
-    if ($uri = /index.html) {
-        return 301 /;
-    }
-    if ($uri = /index) {
-        return 301 /;
-    }
-    
-    # Redirect any .html URL to clean URL (e.g., /about.html -> /about)
-    if ($request_uri ~ ^/(.+)\.html$) {
-        return 301 /$1;
-    }
+    # Rewrite rules for clean URLs (must be before location blocks)
+    rewrite ^/index\.html$ / permanent;
+    rewrite ^/index$ / permanent;
+    rewrite ^([^.]*[^/])$ $1/ permanent;
+    rewrite ^/(.+)\.html$ /$1 permanent;
     
     root /var/www/sexfinderapp;
     index index.html;
