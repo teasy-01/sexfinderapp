@@ -185,10 +185,10 @@ server {
         add_header Cache-Control "public, immutable";
     }
     
-    # Cache HTML files (shorter)
-    location ~* \.html$ {
-        expires 7d;
-        add_header Cache-Control "public";
+    # Redirect .html files to clean URLs
+    location ~ \.html$ {
+        rewrite ^/(.+)\.html$ /$1 permanent;
+        rewrite ^/index\.html$ / permanent;
     }
     
     # Remove .html extension from URLs
