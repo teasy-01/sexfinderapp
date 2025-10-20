@@ -167,13 +167,6 @@ server {
     add_header Referrer-Policy "strict-origin-when-cross-origin" always;
     add_header Content-Security-Policy "default-src 'self'; script-src 'self' https://cdn.tailwindcss.com https://code.jquery.com https://cdnjs.cloudflare.com https://maxcdn.bootstrapcdn.com https://cdn.jsdelivr.net https://use.fontawesome.com 'unsafe-inline'; style-src 'self' https://cdn.tailwindcss.com https://stackpath.bootstrapcdn.com https://use.fontawesome.com 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data: https://use.fontawesome.com; connect-src 'self' https://api.ipify.org https://ipapi.co https://central.captainemails.com https://checkip.amazonaws.com https://www.instabang.com;" always;
     
-    # Redirect .html URLs to clean URLs (e.g., /about.html -> /about)
-    rewrite ^(/.+)\.html$ $1 permanent;
-    
-    # Redirect /index and /index.html to root /
-    rewrite ^/index\.html$ / permanent;
-    rewrite ^/index$ / permanent;
-    
     # Cache headers for static assets
     location ~* \.(jpg|jpeg|png|gif|ico|css|js|svg|woff|woff2|ttf|eot)$ {
         expires 365d;
@@ -188,6 +181,19 @@ server {
     
     # Remove .html extension from URLs
     location / {
+        # Redirect /index.html and /index to /
+        if ($uri = /index.html) {
+            return 301 /;
+        }
+        if ($uri = /index) {
+            return 301 /;
+        }
+        
+        # Redirect any .html URL to clean URL (e.g., /about.html -> /about)
+        if ($request_uri ~ ^/(.+)\.html$) {
+            return 301 /$1;
+        }
+        
         try_files $uri $uri/ $uri.html =404;
     }
     
