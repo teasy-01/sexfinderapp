@@ -142,11 +142,30 @@ server {
     listen 443 ssl http2;
     listen [::]:443 ssl http2;
     
+    ssl_certificate /etc/letsencrypt/live/sexfinderapp.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/sexfinderapp.com/privkey.pem;
+    ssl_protocols TLSv1.2 TLSv1.3;
+    ssl_ciphers HIGH:!aNULL:!MD5;
+    ssl_prefer_server_ciphers on;
+    
     server_name sexfinderapp.com www.sexfinderapp.com;
     
     # Redirect www to non-www
     if ($server_name = www.sexfinderapp.com) {
         return 301 https://sexfinderapp.com$request_uri;
+    }
+    
+    # Redirect /index.html and /index to /
+    if ($uri = /index.html) {
+        return 301 /;
+    }
+    if ($uri = /index) {
+        return 301 /;
+    }
+    
+    # Redirect any .html URL to clean URL (e.g., /about.html -> /about)
+    if ($request_uri ~ ^/(.+)\.html$) {
+        return 301 /$1;
     }
     
     root /var/www/sexfinderapp;
@@ -181,19 +200,6 @@ server {
     
     # Remove .html extension from URLs
     location / {
-        # Redirect /index.html and /index to /
-        if ($uri = /index.html) {
-            return 301 /;
-        }
-        if ($uri = /index) {
-            return 301 /;
-        }
-        
-        # Redirect any .html URL to clean URL (e.g., /about.html -> /about)
-        if ($request_uri ~ ^/(.+)\.html$) {
-            return 301 /$1;
-        }
-        
         try_files $uri $uri/ $uri.html =404;
     }
     
