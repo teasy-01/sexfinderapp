@@ -156,9 +156,10 @@ server {
     }
     
     # Rewrite rules for clean URLs (must be before location blocks)
+    # First, handle index redirects (highest priority)
     rewrite ^/index\.html$ / permanent;
     rewrite ^/index$ / permanent;
-    rewrite ^([^.]*[^/])$ $1/ permanent;
+    # Then handle other .html redirects
     rewrite ^/(.+)\.html$ /$1 permanent;
     
     root /var/www/sexfinderapp;
