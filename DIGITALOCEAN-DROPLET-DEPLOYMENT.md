@@ -132,21 +132,10 @@ server {
     listen 80;
     listen [::]:80;
     server_name sexfinderapp.com www.sexfinderapp.com;
-    return 301 https://sexfinderapp.com$request_uri;
-}
-
-# HTTPS www to non-www redirect
-server {
-    listen 443 ssl http2;
-    listen [::]:443 ssl http2;
-    
-    ssl_certificate /etc/letsencrypt/live/sexfinderapp.com/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/sexfinderapp.com/privkey.pem;
-    ssl_protocols TLSv1.2 TLSv1.3;
-    ssl_ciphers HIGH:!aNULL:!MD5;
-    ssl_prefer_server_ciphers on;
-    
-    server_name www.sexfinderapp.com;
+    # Redirect www to non-www AND to HTTPS
+    if ($host = www.sexfinderapp.com) {
+        return 301 https://sexfinderapp.com$request_uri;
+    }
     return 301 https://sexfinderapp.com$request_uri;
 }
 
